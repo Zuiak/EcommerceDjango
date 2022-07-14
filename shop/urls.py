@@ -4,4 +4,5 @@ import shop.views
 urlpatterns = [
     path('', shop.views.home, name="homepage"),
     path('about/', shop.views.about, name="about"),
+    path('product/', shop.views.product, name="product"),
 ]
