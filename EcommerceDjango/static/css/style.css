@@ -268,3 +268,9 @@ footer .link-dark:hover{
 .product-page .old-price{
     opacity: 0.6;
 }
+
+/* Post */
+.post-details img{
+    height: auto;
+    width: -webkit-fill-available;
+}

@@ -3,5 +3,22 @@
     Blog - E-commerce Django solution
 {% endblock %}
 {% block content %}
-<h1>Homepage</h1>
+    <article class="post-details py-5">
+        <section class="py-2 text-center container">
+            <div class="row ">
+                <div class="col-xl-6">
+                    <img src="{{ post.image.url }}" alt="">
+                </div>
+                <div class="col-xl-6 text-start">
+                    <h1 class="fw-bold">{{ post.title }}</h1>
+                    <p class="date">{{ post.date }}</p>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="py-lg-3">
+                {{ post.text }}
+            </div>
+        </div>
+    </article>
 {% endblock %}

@@ -3,13 +3,18 @@ from django.db import models
 
 # Create your models here.
 class Article(models.Model):
-    article_title = models.TextField(max_length=30)
-    article_date = models.DateField()
-    article_text = models.CharField(max_length=10000000)
-    article_img = models.ImageField('blog_images/')
+    title = models.CharField(max_length=30)
+    image = models.ImageField(upload_to='blog_images/')
+    text = models.TextField(max_length=10000000)
+    date = models.DateField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('date',)
+        verbose_name = 'article'
+        verbose_name_plural = 'Articles'
 
     def get_summary(self):
-        return self.article_text[:70]
+        return self.text[:150]
 
     def __str__(self):
-        return self.article_title
+        return self.title
