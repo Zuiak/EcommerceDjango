@@ -1,32 +1,21 @@
 {% load static %}
-
 <footer class="border-top bg-primary text-white">
     <div class="container">
-        <div class="row row-cols-5 py-5 my-5s">
-             <div class="col">
+        <div class="row py-5 my-5s">
+             <div class="col-xl-8">
                 <a href="{% url 'homepage' %}" class="d-flex align-items-center mb-3 link-dark text-decoration-none text-white fs-5" style=":hover{color: #fff}">
                     <span class="material-symbols-outlined me-2">shopping_bag</span>Ecommerce Django
                 </a>
                 <p class="text-white">© {% now 'Y' %}</p>
             </div>
-
-            <div class="col">
-
-            </div>
-
-            <div class="col">
-
-            </div>
-
-            <div class="col">
+            <div class="col-xl-2">
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="{% url 'homepage' %}" class="nav-link p-0 text-white">Home</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'blog' %}" class="nav-link p-0 text-white">Blog</a></li>
                     <li class="nav-item mb-2"><a href="{% url 'about' %}" class="nav-link p-0 text-white">About us</a></li>
                 </ul>
             </div>
-
-            <div class="col">
+            <div class="col-xl-2">
                 <h5>Categories</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
