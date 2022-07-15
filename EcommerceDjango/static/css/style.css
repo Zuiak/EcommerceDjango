@@ -247,6 +247,9 @@ footer .link-dark:hover{
     background-color: #444444;
     transform: translateY(-50%);
 }
+.section-products .single-product:hover .part-1::before{
+    transform: scale(1.2,1.2);
+}
 
 /* Product page */
 .product-page .add-to-cart{
