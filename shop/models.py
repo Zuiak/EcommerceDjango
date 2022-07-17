@@ -10,7 +10,7 @@ class Category(models.Model):
     img = models.ImageField(upload_to='category', blank=True)
 
     class Meta:
-        ordering = ('name', )
+        ordering = ('name',)
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
@@ -34,9 +34,12 @@ class Product(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ('updated', )
+        ordering = ('updated',)
         verbose_name = 'product'
         verbose_name_plural = 'products'
+
+    def get_url(self):
+        return reverse('products_page', args=[self.category.slug, self.slug])
 
     def __str__(self):
         return self.name

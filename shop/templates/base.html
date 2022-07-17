@@ -7,7 +7,7 @@
         <title>{% block title %}{% endblock %}</title>
         {% include 'style-imports.html' %}
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         {% include 'navbar.html' %}
 
         {% block content %}{% endblock %}
