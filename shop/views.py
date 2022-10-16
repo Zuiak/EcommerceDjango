@@ -35,7 +35,8 @@ def _cart_id(request):
 
     if not _cart_id:
         cart = request.session.create()
-        return cart
+
+    return cart
 
 
 def add_cart(request, product_id):
